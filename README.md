@@ -1,2 +1,5 @@
 # Php-multiple-image-upload
-Here is a code to upload multiple images in php using single textbox
+Hii Frinds i have created a solution to o upload multiple images in php using single textbox please find the attachment if find any error contact me 
+
+Anil Kumar Sahu 
+
