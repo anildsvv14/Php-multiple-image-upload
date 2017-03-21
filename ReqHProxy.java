@@ -50,10 +50,10 @@ public class ReqHProxy implements cris.ReqH {
     return reqH.test();
   }
   
-  public int add(int a) throws java.rmi.RemoteException{
+  public java.lang.String add(int a, int b) throws java.rmi.RemoteException{
     if (reqH == null)
       _initReqHProxy();
-    return reqH.add(a);
+    return reqH.add(a, b);
   }
   
   
