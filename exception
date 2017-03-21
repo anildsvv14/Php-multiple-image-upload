@@ -1,5 +1,7 @@
-Mar 21, 2017 3:59:43 PM org.apache.axis.utils.JavaUtils isAttachmentSupported
+Mar 21, 2017 4:16:13 PM org.apache.axis.utils.JavaUtils isAttachmentSupported
 WARNING: Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
+5
+6
 Exception in thread "main" AxisFault
  faultCode: {http://schemas.xmlsoap.org/soap/envelope/}Server.generalException
  faultSubcode: 
@@ -39,4 +41,4 @@ Tried to invoke method public java.lang.String cris.ReqH.add(int,int) with argum
 	at org.apache.axis.client.Call.invoke(Call.java:1812)
 	at cris.ReqHSoapBindingStub.add(ReqHSoapBindingStub.java:117)
 	at cris.ReqHProxy.add(ReqHProxy.java:56)
-	at test.ClinetTest.main(ClinetTest.java:10)
+	at test.ClinetTest.main(ClinetTest.java:14)
