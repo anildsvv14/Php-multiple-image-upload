@@ -1,44 +1,27 @@
-Mar 21, 2017 4:16:13 PM org.apache.axis.utils.JavaUtils isAttachmentSupported
-WARNING: Unable to find required classes (javax.activation.DataHandler and javax.mail.internet.MimeMultipart). Attachment support is disabled.
-5
-6
-Exception in thread "main" AxisFault
- faultCode: {http://schemas.xmlsoap.org/soap/envelope/}Server.generalException
- faultSubcode: 
- faultString: Tried to invoke method public java.lang.String cris.ReqH.add(int,int) with arguments java.lang.Integer,null.  The arguments do not match the signature.; nested exception is: 
-	java.lang.IllegalArgumentException
- faultActor: 
- faultNode: 
- faultDetail: 
-	{http://xml.apache.org/axis/}hostname:IQDTMARKETING5
-
-Tried to invoke method public java.lang.String cris.ReqH.add(int,int) with arguments java.lang.Integer,null.  The arguments do not match the signature.; nested exception is: 
-	java.lang.IllegalArgumentException
-	at org.apache.axis.message.SOAPFaultBuilder.createFault(SOAPFaultBuilder.java:222)
-	at org.apache.axis.message.SOAPFaultBuilder.endElement(SOAPFaultBuilder.java:129)
-	at org.apache.axis.encoding.DeserializationContext.endElement(DeserializationContext.java:1087)
-	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.endElement(Unknown Source)
-	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanEndElement(Unknown Source)
-	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(Unknown Source)
-	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source)
-	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(Unknown Source)
-	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source)
-	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
-	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source)
-	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source)
-	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source)
-	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source)
-	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(Unknown Source)
-	at org.apache.axis.encoding.DeserializationContext.parse(DeserializationContext.java:227)
-	at org.apache.axis.SOAPPart.getAsSOAPEnvelope(SOAPPart.java:696)
-	at org.apache.axis.Message.getSOAPEnvelope(Message.java:435)
-	at org.apache.axis.handlers.soap.MustUnderstandChecker.invoke(MustUnderstandChecker.java:62)
-	at org.apache.axis.client.AxisClient.invoke(AxisClient.java:206)
-	at org.apache.axis.client.Call.invokeEngine(Call.java:2784)
-	at org.apache.axis.client.Call.invoke(Call.java:2767)
-	at org.apache.axis.client.Call.invoke(Call.java:2443)
-	at org.apache.axis.client.Call.invoke(Call.java:2366)
-	at org.apache.axis.client.Call.invoke(Call.java:1812)
-	at cris.ReqHSoapBindingStub.add(ReqHSoapBindingStub.java:117)
-	at cris.ReqHProxy.add(ReqHProxy.java:56)
-	at test.ClinetTest.main(ClinetTest.java:14)
+Apr 03, 2017 4:16:16 PM org.springframework.context.support.ClassPathXmlApplicationContext prepareRefresh
+INFO: Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@27f8302d: startup date [Mon Apr 03 16:16:16 IST 2017]; root of context hierarchy
+Apr 03, 2017 4:16:16 PM org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+INFO: Loading XML bean definitions from class path resource [cris/spring.xml]
+Apr 03, 2017 4:16:16 PM org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+INFO: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@17550481: defining beans [a1,e]; root of factory hierarchy
+Exception in thread "main" java.lang.IllegalArgumentException
+	at org.springframework.asm.ClassReader.<init>(Unknown Source)
+	at org.springframework.asm.ClassReader.<init>(Unknown Source)
+	at org.springframework.asm.ClassReader.<init>(Unknown Source)
+	at org.springframework.core.LocalVariableTableParameterNameDiscoverer.inspectClass(LocalVariableTableParameterNameDiscoverer.java:112)
+	at org.springframework.core.LocalVariableTableParameterNameDiscoverer.getParameterNames(LocalVariableTableParameterNameDiscoverer.java:86)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1049)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:953)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:490)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:461)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:295)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:223)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:292)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:607)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:479)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at cris.Test.main(Test.java:8)
